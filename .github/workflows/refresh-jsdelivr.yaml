@@ -1,0 +1,15 @@
+name: Fetch script's Jsdelivr cache
+
+on:
+  push:
+    paths:
+      - 'naive.sh'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fetch script's Jsdelivr cache
+        run: |
+          curl https://purge.jsdelivr.net/gh/mikupeto/naiveproxy-script/naive.sh
